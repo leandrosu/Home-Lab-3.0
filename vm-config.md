@@ -84,3 +84,61 @@ All components run on the same host (single-node deployment).
   - Linux servers
 
 - Data flow:
+
+Endpoint → Wazuh Agent → Wazuh Manager → Indexer → Dashboard
+
+## Detection & Correlation
+
+- Default Wazuh ruleset
+- Custom rules for:
+- Samba activity
+- Cloudflare events
+- Network IDS alerts
+- Identity-aware correlation using AD data
+
+---
+
+## Storage & Retention
+
+- Logs indexed in OpenSearch
+- Retention based on disk capacity and tuning
+- No cold storage implemented yet
+
+---
+
+## Security Posture
+
+- Restricted network exposure
+- Proxmox firewall enabled
+- Centralized visibility across infrastructure
+- No direct user access to raw logs
+
+---
+
+## Known Limitations
+
+- Single-node SOC
+- No index replication
+- No off-node backups
+
+---
+
+## Change Control
+
+Any changes to:
+- Index retention
+- Rulesets
+- Integrations
+- Agent configuration
+
+must be documented and validated to prevent blind spots.
+
+---
+
+## Status
+
+- SOC operational
+- Logs ingesting from all core systems
+- Dashboards active
+- Ready for operational runbook
+
