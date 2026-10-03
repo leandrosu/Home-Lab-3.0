@@ -7,7 +7,7 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 Home Lab 3.0 is an **enterprise-inspired infrastructure and security laboratory** designed to simulate how modern organizations build, operate, and secure their internal environments.
 
@@ -26,7 +26,7 @@ If something is not documented, it does not exist.
 
 ---
 
-## 🧠 Design Principles
+## Design Principles
 
 The lab follows strict engineering principles:
 
@@ -42,7 +42,7 @@ This lab is treated as if it belongs to a real company and could be audited at a
 
 ---
 
-## 🏗️ Physical & Core Infrastructure
+## Physical & Core Infrastructure
 
 ### Hardware
 
@@ -64,7 +64,7 @@ This lab is treated as if it belongs to a real company and could be audited at a
 
 ---
 
-## 🌐 Network Architecture
+## Network Architecture
 
 ### VLAN Segmentation
 
@@ -87,7 +87,7 @@ This lab is treated as if it belongs to a real company and could be audited at a
 
 ---
 
-## 🌍 DNS Strategy
+## DNS Strategy
 
 DNS is intentionally designed to preserve **Active Directory integrity** while still allowing controlled internet resolution.
 
@@ -108,9 +108,9 @@ This guarantees:
 
 ---
 
-## 🖥️ Virtual Machines Inventory
+## Virtual Machines Inventory
 
-### 🟦 KRANG — Active Directory Domain Controller
+### KRANG — Active Directory Domain Controller
 
 * **OS:** Windows Server 2022
 * **IP:** `172.16.20.2`
@@ -125,7 +125,7 @@ KRANG is the **single source of identity** in the lab. If KRANG is unavailable, 
 
 ---
 
-### 🟦 DATABANK — File Server & Identity‑Aware Storage
+### DATABANK — File Server & Identity‑Aware Storage
 
 * **OS:** Debian Linux
 * **IP:** `172.16.20.3`
@@ -154,7 +154,7 @@ This project is intentionally isolated from core Samba operations and treated as
 
 ---
 
-### 🟦 WAZUH — SOC / SIEM
+### WAZUH — SOC / SIEM
 
 * **OS:** Ubuntu 24.04 LTS
 * **IP:** `172.16.20.20`
@@ -176,7 +176,7 @@ WAZUH represents a **real SOC workflow**, with noise filtering, correlation, and
 
 ---
 
-### 🟦 SURICATA — Network Intrusion Detection System
+### SURICATA — Network Intrusion Detection System
 
 * **OS:** Linux
 * **IP:** `192.168.30.50`
@@ -193,7 +193,7 @@ All Suricata logs are forwarded to Wazuh for centralized analysis.
 
 ---
 
-### 🟦 MORPHEUS — Application & Testing Server
+### MORPHEUS — Application & Testing Server
 
 * **OS:** Ubuntu Linux
 * **IP:** `172.16.20.100`
@@ -208,7 +208,7 @@ MORPHEUS is intentionally isolated from core services.
 
 ---
 
-## 🔍 Traffic Visibility & Monitoring
+## Traffic Visibility & Monitoring
 
 * Cisco SPAN mirrors multiple VLANs to the Suricata sensor
 * Suricata performs packet‑level inspection
@@ -223,7 +223,7 @@ This provides **end‑to‑end visibility**.
 
 ---
 
-## 📚 Documentation Structure
+## Documentation Structure
 
 Each VM has its own documentation set:
 
@@ -240,7 +240,7 @@ Additional documentation:
 
 ---
 
-## 🚀 Current Status
+## Current Status
 
 * Network segmentation complete
 * Identity services operational
@@ -251,7 +251,7 @@ Additional documentation:
 
 ---
 
-## 🧭 Roadmap 
+## Roadmap 
 
 * Secondary Domain Controller
 * Backup & restore strategy
@@ -262,4 +262,4 @@ Additional documentation:
 ---
 
 **Author:** Leandro Stolfo Uehara  
-**Project:** Homelab 3.0 — built for learning, testing, and breaking things safely 🔧💻🧩
+**Project:** Homelab 3.0 — built for learning, testing, and breaking things safely 
